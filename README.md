@@ -1,37 +1,22 @@
-Client-Server Information Reporting System
+# Python Remote Access Client
+A Python script that collects information about a computer and reports it back to a server.
 
-This repository contains a client-server system that reports information about a computer to a MariaDB database. The system consists of two main components: the client.py script, which runs on the computer and collects information, and the server.py script, which runs on a separate server and receives information from the client.
-Requirements
+## Requirements
+- Python 3.9 or higher
+- MariaDB
 
-    Python 3.8 or later
-    pip
-    A MariaDB database
+## Usage
+- Run the `server.py` script on the server machine to collect information from the client.
+- Run the `client.py` script on the client machine to report information to the server.
 
-Installation
+## Docker Deployment
+The project includes a `docker-compose.yml` file for deploying the server and MariaDB services using Docker.
 
-    Clone this repository to your computer
-    Create a virtual environment for the project: python -m venv env
-    Activate the virtual environment: source env/bin/activate
-    Install the dependencies: pip install -r requirements.txt
-    Create a .env file and set the following environment variables:
-        DB_HOST: The hostname or IP address of the MariaDB server
-        DB_PORT: The port number of the MariaDB server
-        DB_NAME: The name of the database to use
-        DB_USER: The username for the MariaDB server
-        DB_PASSWORD: The password for the MariaDB server
+## .env File
+The project uses a `.env` file to store sensitive information such as database credentials.
 
-Usage
+## Git Ignore
+The project includes a `.gitignore` file to ignore common files and directories generated during development.
 
-    Run the server.py script on the server: python server.py
-    Run the client.py script on the computer: python client.py
-    Check the MariaDB database to see if the information was successfully recorded.
-
-Deployment with Docker Compose
-
-The docker-compose.yml file in this repository can be used to set up a MariaDB database for use with this system. Simply run docker-compose up to start the database and connect to it. Note that you will need to set the DB_* environment variables in the .env file before starting the database.
-Continuous Integration and Deployment (CI/CD)
-
-This repository uses GitHub Actions to automate the CI/CD process. When changes are pushed to the main branch, the workflow defined in .github/workflows/cicd.yml will run the unit tests, and if they pass, deploy the code to production.
-Testing
-
-This repository includes unit tests to verify the functionality of the client and server scripts. To run the tests, simply run python -m unittest discover while in the virtual environment.
+## Contributing
+Feel free to contribute to this project by submitting pull requests or reporting issues.
