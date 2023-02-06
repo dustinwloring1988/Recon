@@ -1,0 +1,7 @@
+DB_HOST=localhost
+DB_NAME=database_name
+DB_USER=username
+DB_PASS=strong_password
+DB_ROOT_PASSWORD=really_strong_password
+SERVER_ADDRESS=localhost
+SERVER_PORT=31999
